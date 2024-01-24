@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+    color: #e5e5dc;
+    background-color: #000000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 999;
+    top:0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 4vw;
+    color:transparent;
+    background: linear-gradient(to right, orange,orangered);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    position: absolute; 
+    opacity: 0;
+    /* all three h4 stacked upon eachother */
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+
+.loader h4:nth-child(2){
+    animation-delay: 2s;
+}
+.loader h4:nth-child(3){
+    animation-delay: 3s;
+}
+
+
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* For making text bigger in mobile screen use media query */
+
+.homepage{
+    width: 100%;
+    height: 100%;
+
+}
+
+.navbar{
+    width: 100%;
+    height: 12vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1{
+    margin: 7.3vw;
+}
+
+.rightnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+    padding-right: 6.5vw;
+    font-size: 1vw;
+}
+
+.rightnav div{
+    padding: 0.3vw 0vw;
+} 
+
+.rightnav div:hover{
+    color: #fa6004;
+    border-bottom: 2px solid #fa6004;
+}
+
+
+
+
+.container{
+    height: calc(100% - 10vh);
+    width: 100%;
+    display: flex;
+}
+
+.info{
+    width: 50%;
+    height: 100%;
+    color:#969696;
+    padding: 25vh 15vh;
+}
+
+.info h1{
+    text-transform: uppercase;
+    font-size: 4.5vw;
+    padding-bottom: 1vh;
+
+}
+
+.info h5{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color:#969696;
+    font-size: 1vw;
+    line-height: 3vh;
+    font-weight: 400;
+}
+
+.info h5 span {
+    color: #fa6004;
+}
+
+.info h6{
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+
+.socials-btn, .projects-btn{
+    padding: 1.1vh 2vh;
+    color: white;
+    background-color: #fa6004;
+    border-radius: 3px;
+    border: none;
+    
+}
+
+.socials-btn:hover, .projects-btn:hover{
+    color: #d2d0d0;
+    background-color: #ed5903;
+}
+
+.projects-btn{
+    margin-top: 5vh;
+    cursor: pointer;
+}
+
+.useless{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.ri-arrow-right-line, .ri-arrow-right-up-line{
+    color: white;
+    background-color: #fa6004;
+}
+
+.clipart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clipart img{
+    height: 37vw;
+    width: 34vw;
+    object-fit: cover;
+    
+}
+
+
+.projects{
+    width: 100%;
+    height:135%;
+    background-color:#000000;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    row-gap: 3vh;
+
+}
+.projects h1, .skills h1{
+    padding-top: 15vh;
+    font-size: 3.5vw;
+    text-align: center;
+    padding-bottom: 1.5vh;
+    font-weight: 500;
+    border-bottom: 1px solid white;
+    margin-right: 35vw;
+    margin-left: 35vw;
+    margin-bottom: 10vh;
+}
+
+.project{
+    height: 100%;
+    width: 70%;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    line-height: 2vw;
+    
+}
+
+.project a{
+    text-decoration: none;
+}
+
+
+
+.left h4{
+    margin-bottom: 2vh;
+    font-size: 1.2vw;
+    color: #fa6004;
+}
+.left h2 {
+   font-weight: 400;
+   font-size: 1.2vw;
+}
+
+.github{
+    font-size: 1.2vw;
+    margin-top: 3vh;
+    margin-right: 2vh;
+    color: #fa6004;
+    cursor: pointer;
+    display: inline-block;
+    color: #969696;
+    font-weight: 200;
+
+}
+
+.ri-github-fill{
+    padding-right: 0.5vw;
+    color: #fa6004;
+    color: #969696;
+}
+
+.right img{
+    object-fit: cover;
+    height: 10vw;
+    margin-left: 2vw;
+    border-radius: 8px;
+    width: 20vw;
+}
+
+
+
+
+
+.skills{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+
+}
+
+
+.skill-container{
+    width: 80%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw;
+    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill{
+    width: 5vw;
+    object-fit: cover;
+    align-items: center;
+    text-align: center;
+}
+
+.skill img{
+    width: 80%;
+
+}
+
+.skill h5{
+    margin-top: 10px;
+}
+
+/* loader is still incomplete (responsive-ness) watch that shreyians course video */
+
+
+
+
+
+
+
+
+.footer{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.typewriter{
+
+    object-fit: cover;
+}
+
+.typewriter img{
+    position: absolute;
+    width: 50vw;
+    object-fit: cover;
+    top: 10%;
+    left: -10%;
+    opacity: 70%;
+
+}
+
+.footer .text-container{
+    mix-blend-mode:lighten;
+    text-align: center;
+    width: 110vh;
+    position: absolute;
+    z-index: 2;
+    line-height: 2vw;
+}
+
+.footer h5{
+    text-transform: uppercase;
+    color: #fa6004;
+    letter-spacing: 0.1vw;
+    padding-bottom: 3vh;
+}
+
+.footer h1{
+    font-size: 3vw;
+}
+
+.footer h3{
+    padding-top: 5.5vh;
+    font-weight: 100;
+    color: #969696;
+}
+
+
+.by-me{
+    color: #969696;
+    text-transform: uppercase;
+    letter-spacing: 0.2vh;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+}
+
