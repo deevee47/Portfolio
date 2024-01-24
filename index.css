@@ -87,6 +87,10 @@ html, body {
     margin: 7.3vw;
 }
 
+.navbar h1:hover{
+    color: #fa6004;
+    font-size: 2.3vw;
+}
 .rightnav{
     display: flex;
     align-items: center;
@@ -94,17 +98,38 @@ html, body {
     gap: 3vw;
     padding-right: 6.5vw;
     font-size: 1vw;
+
 }
 
 .rightnav div{
     padding: 0.3vw 0vw;
+    position: relative;
+    text-decoration: none;
 } 
 
 .rightnav div:hover{
     color: #fa6004;
-    border-bottom: 2px solid #fa6004;
+}
+    
+.rightnav div::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fa6004;
+    visibility: hidden;
+    /* transform: translateX(-100%); */
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
 }
 
+.rightnav div:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+        
 
 
 
@@ -126,6 +151,10 @@ html, body {
     font-size: 4.5vw;
     padding-bottom: 1vh;
 
+}
+
+.info h1:hover{
+    color: #fa6004;
 }
 
 .info h5{
@@ -218,10 +247,13 @@ html, body {
     height: 100%;
     width: 70%;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 12px;
     display: flex;
-    line-height: 2vw;
-    
+    line-height: 2vw;   
+}
+
+.project:hover{
+    border: 2px solid antiquewhite;
 }
 
 .project a{
@@ -254,7 +286,6 @@ html, body {
 
 .ri-github-fill{
     padding-right: 0.5vw;
-    color: #fa6004;
     color: #969696;
 }
 
@@ -376,3 +407,16 @@ html, body {
     left: 10%;
 }
 
+
+
+/* Chainging ScrollBar */
+/* For Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+width: 8px; /* Set the width of the scrollbar */
+
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #fa6004; /* Set the color of the scrollbar thumb */
+border-radius: 6px;
+}
