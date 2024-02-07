@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Rubik;
+    font-family: Montserrat;
     color: #e5e5dc;
     background-color: #000000;
 }
@@ -81,15 +81,15 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 7vw;
 }
 
 .navbar h1{
-    margin: 7.3vw;
+    font-size: 2.1vw;
 }
 
 .navbar h1:hover{
-    color: #fa6004;
-    font-size: 2.3vw;
+    color: #ff0016;
 }
 .rightnav{
     display: flex;
@@ -108,7 +108,7 @@ html, body {
 } 
 
 .rightnav div:hover{
-    color: #fa6004;
+    color: #ff0016;
 }
     
 .rightnav div::after {
@@ -118,7 +118,7 @@ html, body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fa6004;
+    background-color: #ff0016;
     visibility: hidden;
     /* transform: translateX(-100%); */
     transform: scaleX(0);
@@ -129,7 +129,7 @@ html, body {
     visibility: visible;
     transform: scaleX(1);
 }
-        
+
 
 
 
@@ -143,6 +143,7 @@ html, body {
     width: 50%;
     height: 100%;
     color:#969696;
+    font-weight:400;
     padding: 25vh 15vh;
 }
 
@@ -154,55 +155,60 @@ html, body {
 }
 
 .info h1:hover{
-    color: #fa6004;
+    color: #ff0016;
 }
 
 .info h5{
     padding-top: 2vh;
     padding-bottom: 2vh;
     color:#969696;
+    font-weight:400;
     font-size: 1vw;
     line-height: 3vh;
     font-weight: 400;
 }
 
 .info h5 span {
-    color: #fa6004;
+    color: #ff0016;
+    font-weight: 400;
 }
 
 .info h6{
-    font-size: 0.9vw;
-    font-weight: 500;
+    font-size: 0.8vw;
+    font-weight: 400;
 }
 
 .socials-btn, .projects-btn{
     padding: 1.1vh 2vh;
-    color: white;
-    background-color: #fa6004;
+    border: 2px solid #ff0016;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #ff0016;
     border-radius: 3px;
-    border: none;
-    
-}
-
-.socials-btn:hover, .projects-btn:hover{
-    color: #d2d0d0;
-    background-color: #ed5903;
-}
-
-.projects-btn{
-    margin-top: 5vh;
+    background-image: none;  
     cursor: pointer;
 }
 
+.socials-btn:hover, .projects-btn:hover{
+    background-image: linear-gradient(319deg, #ffcb43 0%, #ff6425 37%, #ff0016 100%);
+    color: white;
+}
+
+
+
 .useless{
+    margin-top: 15vh;
     align-items: center;
     justify-content: center;
     display: flex;
 }
 
 .ri-arrow-right-line, .ri-arrow-right-up-line{
+    color: #ff0016;
+}
+
+.ri-arrow-right-line:hover, .ri-arrow-right-up-line:hover{
     color: white;
-    background-color: #fa6004;
 }
 
 .clipart{
@@ -232,29 +238,34 @@ html, body {
 
 }
 .projects h1, .skills h1{
-    padding-top: 15vh;
-    font-size: 3.5vw;
+    text-transform: uppercase;
+    padding-top: 12vh;
+    font-weight: 700;
+    font-size: 3vw;
     text-align: center;
-    padding-bottom: 1.5vh;
-    font-weight: 500;
-    border-bottom: 1px solid white;
-    margin-right: 35vw;
-    margin-left: 35vw;
     margin-bottom: 10vh;
 }
 
-.project{
+.project {
     height: 100%;
     width: 70%;
-    padding: 20px;
+    padding: 15px;
+    margin-bottom: 1.2vw;
     border-radius: 12px;
     display: flex;
-    line-height: 2vw;   
+    line-height: 2vw;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.project:hover{
-    border: 2px solid antiquewhite;
+.project:hover {
+    border-image: linear-gradient(to right, transparent, white, transparent);
+    /* border-image: linear-gradient(to right, white, transparent, white); */
+    border-image-slice: 1; /* Slice the border image into equal parts */
 }
+
+
 
 .project a{
     text-decoration: none;
@@ -265,8 +276,9 @@ html, body {
 .left h4{
     margin-bottom: 2vh;
     font-size: 1.2vw;
-    color: #fa6004;
+    color: #ff0016;
 }
+
 .left h2 {
    font-weight: 400;
    font-size: 1.2vw;
@@ -276,17 +288,18 @@ html, body {
     font-size: 1.2vw;
     margin-top: 3vh;
     margin-right: 2vh;
-    color: #fa6004;
+    color: #ff0016;
     cursor: pointer;
     display: inline-block;
     color: #969696;
-    font-weight: 200;
+    font-weight:400;
 
 }
 
 .ri-github-fill{
     padding-right: 0.5vw;
     color: #969696;
+    font-weight:400;
 }
 
 .right img{
@@ -382,7 +395,7 @@ html, body {
 
 .footer h5{
     text-transform: uppercase;
-    color: #fa6004;
+    color: #ff0016;
     letter-spacing: 0.1vw;
     padding-bottom: 3vh;
 }
@@ -395,11 +408,13 @@ html, body {
     padding-top: 5.5vh;
     font-weight: 100;
     color: #969696;
+    font-weight:400;
 }
 
 
 .by-me{
     color: #969696;
+    font-weight:400;
     text-transform: uppercase;
     letter-spacing: 0.2vh;
     position: absolute;
@@ -417,6 +432,6 @@ width: 8px; /* Set the width of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: #fa6004; /* Set the color of the scrollbar thumb */
+background-color: #ff0016; /* Set the color of the scrollbar thumb */
 border-radius: 6px;
 }
