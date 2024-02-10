@@ -86,11 +86,14 @@ html, body {
 
 .navbar h1{
     font-size: 2.1vw;
+    transition: all 0.15s ease-in;
 }
 
 .navbar h1:hover{
+    cursor: pointer;
     color: #ff0016;
 }
+
 .rightnav{
     display: flex;
     align-items: center;
@@ -101,17 +104,17 @@ html, body {
 
 }
 
-.rightnav div{
+.rightnav .rightnav-link{
     padding: 0.3vw 0vw;
     position: relative;
     text-decoration: none;
 } 
 
-.rightnav div:hover{
+.rightnav .rightnav-link:hover{
     color: #ff0016;
 }
     
-.rightnav div::after {
+.rightnav .rightnav-link::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -125,7 +128,7 @@ html, body {
     transition: all 0.3s ease-in-out 0s;
 }
 
-.rightnav div:hover::after {
+.rightnav .rightnav-link:hover::after {
     visibility: visible;
     transform: scaleX(1);
 }
@@ -151,10 +154,12 @@ html, body {
     text-transform: uppercase;
     font-size: 4.5vw;
     padding-bottom: 1vh;
+    transition: 0.15s ease-in;
 
 }
 
 .info h1:hover{
+    cursor: pointer;
     color: #ff0016;
 }
 
@@ -168,7 +173,7 @@ html, body {
     font-weight: 400;
 }
 
-.info h5 span {
+.info h5 .fsd {
     color: #ff0016;
     font-weight: 400;
 }
@@ -187,6 +192,8 @@ html, body {
     border-radius: 3px;
     background-image: none;  
     cursor: pointer;
+    z-index: 1;
+    transition: 0.15s ease-in;
 }
 
 .socials-btn:hover, .projects-btn:hover{
@@ -203,12 +210,14 @@ html, body {
     display: flex;
 }
 
-.ri-arrow-right-line, .ri-arrow-right-up-line{
-    color: #ff0016;
+.socials-btn i, .projects-btn i {
+    color: inherit
 }
 
-.ri-arrow-right-line:hover, .ri-arrow-right-up-line:hover{
-    color: white;
+.socials-btn:hover .ri-arrow-right-up-line, .projects-btn:hover .ri-arrow-right-line {
+    z-index: 1;
+    background-color: transparent;
+    color: inherit;
 }
 
 .clipart{
@@ -256,7 +265,7 @@ html, body {
     line-height: 2vw;
     box-sizing: border-box;
     border: 3px solid transparent;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease-in;
 }
 
 .project:hover {
@@ -264,8 +273,6 @@ html, body {
     /* border-image: linear-gradient(to right, white, transparent, white); */
     border-image-slice: 1; /* Slice the border image into equal parts */
 }
-
-
 
 .project a{
     text-decoration: none;
